@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import CTA from '../components/CTA';
 
 export default function Team() {
   const teamMembers = [
@@ -77,9 +78,11 @@ export default function Team() {
         </div>
       </section>
       
-      <section className="bg-surface-container-low py-16 text-center">
+      <section className="bg-surface-container-low py-16 text-center mb-section-gap">
         <p className="text-xl text-primary font-bold">And over 120 dedicated community volunteers.</p>
       </section>
+      
+      <CTA />
     </>
   );
 }

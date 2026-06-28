@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import CTA from '../components/CTA';
 
 export default function News() {
   const news = [
@@ -48,31 +49,35 @@ export default function News() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-xl overflow-hidden border border-outline-variant/30 shadow-sm flex flex-col group cursor-pointer hover:shadow-md transition-all"
+              className="h-full"
             >
-              <div className="h-48 overflow-hidden relative">
-                <img 
-                  src={item.image} 
-                  alt={item.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute top-4 left-4 bg-primary-container text-white px-3 py-1 rounded text-xs font-bold uppercase tracking-wider">
-                  {item.category}
+              <Link to="/stories/mama-kerubo" className="bg-white rounded-xl overflow-hidden border border-outline-variant/30 shadow-sm flex flex-col group cursor-pointer hover:shadow-md transition-all h-full">
+                <div className="h-48 overflow-hidden relative">
+                  <img 
+                    src={item.image} 
+                    alt={item.title} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute top-4 left-4 bg-primary-container text-white px-3 py-1 rounded text-xs font-bold uppercase tracking-wider">
+                    {item.category}
+                  </div>
                 </div>
-              </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <span className="text-on-surface-variant text-sm mb-2">{item.date}</span>
-                <h3 className="font-display text-xl font-bold text-primary mb-3 group-hover:text-secondary-container transition-colors">{item.title}</h3>
-                <p className="text-on-surface-variant flex-grow mb-4">{item.excerpt}</p>
-                <div className="text-secondary-container font-bold text-sm uppercase tracking-wider mt-auto inline-flex items-center">
-                  Read More
-                  <svg className="ml-1 group-hover:translate-x-1 transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                <div className="p-6 flex flex-col flex-grow">
+                  <span className="text-on-surface-variant text-sm mb-2">{item.date}</span>
+                  <h3 className="font-display text-xl font-bold text-primary mb-3 group-hover:text-secondary-container transition-colors">{item.title}</h3>
+                  <p className="text-on-surface-variant flex-grow mb-4">{item.excerpt}</p>
+                  <div className="text-secondary-container font-bold text-sm uppercase tracking-wider mt-auto inline-flex items-center">
+                    Read More
+                    <svg className="ml-1 group-hover:translate-x-1 transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </motion.div>
           ))}
         </div>
       </section>
+      
+      <CTA />
     </>
   );
 }

@@ -3,13 +3,8 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Utensils, Car, ShieldPlus, HeartHandshake } from 'lucide-react';
 import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
-import { useInView } from 'react-intersection-observer';
 
 export default function Home() {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
 
   return (
     <>
@@ -102,32 +97,32 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-section-gap bg-surface-container-lowest border-b border-primary-container/5 relative overflow-hidden" id="impact" ref={ref}>
+      <section className="py-section-gap bg-surface-container-lowest border-b border-primary-container/5 relative overflow-hidden" id="impact">
         {/* Shimmer effect background */}
         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-secondary-container to-transparent opacity-50"></div>
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="p-stack-lg relative group">
+          <div className="grid grid-cols-2 md:grid-cols-4 text-center border border-primary-container/5 rounded-xl overflow-hidden bg-surface">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="p-stack-lg relative group border-b md:border-b-0 md:border-r border-primary-container/5">
               <div className="font-display text-4xl md:text-5xl font-bold text-secondary-container mb-stack-sm group-hover:scale-110 transition-transform duration-300">
-                {inView ? <CountUp end={5000} duration={2.5} separator="," /> : '0'}+
+                <CountUp end={5000} duration={2.5} separator="," enableScrollSpy scrollSpyOnce />+
               </div>
               <p className="font-label-sm text-sm font-semibold text-on-surface-variant uppercase tracking-wider">Families Served</p>
             </motion.div>
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="p-stack-lg border-l border-primary-container/5 relative group">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="p-stack-lg relative group border-b md:border-b-0 md:border-r border-l md:border-l-0 border-primary-container/5">
               <div className="font-display text-4xl md:text-5xl font-bold text-secondary-container mb-stack-sm group-hover:scale-110 transition-transform duration-300">
-                {inView ? <CountUp end={120} duration={2.5} /> : '0'}+
+                <CountUp end={120} duration={2.5} enableScrollSpy scrollSpyOnce />+
               </div>
               <p className="font-label-sm text-sm font-semibold text-on-surface-variant uppercase tracking-wider">Volunteers</p>
             </motion.div>
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="p-stack-lg md:border-l border-t md:border-t-0 border-primary-container/5 relative group">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="p-stack-lg relative group md:border-r border-primary-container/5">
               <div className="font-display text-4xl md:text-5xl font-bold text-secondary-container mb-stack-sm group-hover:scale-110 transition-transform duration-300">
-                {inView ? <CountUp end={15} duration={2.5} /> : '0'}
+                <CountUp end={15} duration={2.5} enableScrollSpy scrollSpyOnce />
               </div>
               <p className="font-label-sm text-sm font-semibold text-on-surface-variant uppercase tracking-wider">Communities</p>
             </motion.div>
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} className="p-stack-lg border-l border-t md:border-t-0 border-primary-container/5 relative group">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} className="p-stack-lg relative group border-l md:border-l-0 border-primary-container/5">
               <div className="font-display text-4xl md:text-5xl font-bold text-secondary-container mb-stack-sm group-hover:scale-110 transition-transform duration-300">
-                {inView ? <CountUp end={100} duration={2.5} /> : '0'}%
+                <CountUp end={100} duration={2.5} enableScrollSpy scrollSpyOnce />%
               </div>
               <p className="font-label-sm text-sm font-semibold text-on-surface-variant uppercase tracking-wider">% Transparent</p>
             </motion.div>

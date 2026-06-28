@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import CTA from '../components/CTA';
 
 export default function About() {
   return (
@@ -150,6 +151,8 @@ export default function About() {
           </div>
         </div>
       </section>
+      
+      <CTA />
     </>
   );
 }

@@ -41,7 +41,7 @@ export default function App() {
           <Route path="programs/elderly-support" element={<ElderlySupport />} />
           <Route path="impact" element={<Impact />} />
           <Route path="stories" element={<Stories />} />
-          <Route path="stories/mama-kerubo" element={<StoryDetail />} />
+          <Route path="stories/:id" element={<StoryDetail />} />
           <Route path="get-involved" element={<GetInvolved />} />
           <Route path="contact" element={<Contact />} />
           <Route path="transparency" element={<Transparency />} />

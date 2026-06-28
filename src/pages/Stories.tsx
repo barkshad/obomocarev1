@@ -138,9 +138,9 @@ export default function Stories() {
                   {story.excerpt}
                 </p>
                 <div className="mt-auto">
-                  <span className="inline-flex items-center gap-1 text-secondary-container text-sm font-semibold uppercase group-hover:translate-x-2 transition-transform">
+                  <Link to={`/stories/${story.id}`} className="inline-flex items-center gap-1 text-secondary-container text-sm font-semibold uppercase group-hover:translate-x-2 transition-transform">
                     Read Article <ArrowRight size={16} />
-                  </span>
+                  </Link>
                 </div>
               </div>
             </motion.article>

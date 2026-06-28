@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Utensils, Car, ShieldPlus, HeartHandshake } from 'lucide-react';
 import { motion } from 'framer-motion';
+import CTA from '../components/CTA';
 
 export default function Programs() {
   return (
@@ -161,6 +162,8 @@ export default function Programs() {
           </div>
         </motion.div>
       </section>
+      
+      <CTA />
     </>
   );
 }

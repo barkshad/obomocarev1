@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Download, Users, BriefcaseMedical, CheckCircle2 } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
 import { motion } from 'framer-motion';
+import CTA from '../components/CTA';
 
 const barData = [
   { year: '2020', households: 1200 },
@@ -174,6 +175,8 @@ export default function Impact() {
           </div>
         </div>
       </section>
+      
+      <CTA />
     </>
   );
 }

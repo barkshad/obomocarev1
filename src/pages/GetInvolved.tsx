@@ -169,6 +169,46 @@ export default function GetInvolved() {
           </div>
         </div>
       </section>
+
+      <section className="py-section-gap bg-surface-container-low border-t border-primary-container/10">
+        <div className="max-w-4xl mx-auto px-margin-mobile md:px-margin-desktop text-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <h2 className="font-display text-3xl font-bold text-primary-container mb-6">Other Ways to Give</h2>
+            <p className="text-on-surface-variant mb-12">Prefer to make a direct transfer? Here are our official banking details.</p>
+            
+            <div className="bg-white p-8 rounded-xl border border-outline-variant/30 shadow-sm text-left max-w-2xl mx-auto">
+              <h3 className="font-bold text-primary text-xl mb-6 border-b border-outline-variant/20 pb-4">Direct Bank Transfer</h3>
+              
+              <div className="space-y-4">
+                <div className="grid grid-cols-3">
+                  <span className="font-bold text-on-surface-variant col-span-1">Account Name:</span>
+                  <span className="col-span-2 text-primary font-medium">OBOMOCARE CBO</span>
+                </div>
+                <div className="grid grid-cols-3">
+                  <span className="font-bold text-on-surface-variant col-span-1">Bank:</span>
+                  <span className="col-span-2 text-primary font-medium">Equity Bank Kenya</span>
+                </div>
+                <div className="grid grid-cols-3">
+                  <span className="font-bold text-on-surface-variant col-span-1">Branch:</span>
+                  <span className="col-span-2 text-primary font-medium">Kisii Branch</span>
+                </div>
+                <div className="grid grid-cols-3">
+                  <span className="font-bold text-on-surface-variant col-span-1">Account Number:</span>
+                  <span className="col-span-2 text-primary font-medium tracking-wider">0123456789012</span>
+                </div>
+                <div className="grid grid-cols-3 pt-4">
+                  <span className="font-bold text-on-surface-variant col-span-1">M-PESA Paybill:</span>
+                  <span className="col-span-2 text-primary font-medium tracking-wider text-secondary-container">246810</span>
+                </div>
+                <div className="grid grid-cols-3">
+                  <span className="font-bold text-on-surface-variant col-span-1">Account:</span>
+                  <span className="col-span-2 text-primary font-medium">Your Name / Project</span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </>
   );
 }
